@@ -1,7 +1,7 @@
 const sizeContrSelect = document.getElementById("font-size-control");
 const textSelect = document.getElementById("text");
 const sizeChange = () => {
-  let protoFX = sizeContrSelect.value;
-  textSelect.style.fontSize = protoFX + "px";
+  let feedbackFunction = sizeContrSelect.value;
+  textSelect.style.fontSize = feedbackFunction + "px";
 };
-sizeContrSelect.addEventListener("change", sizeChange);
+sizeContrSelect.addEventListener("input", sizeChange);
