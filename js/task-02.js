@@ -6,10 +6,12 @@ const ingredients = [
   "Herbs",
   "Condiments",
 ];
-const ingrSelect = document.getElementById("ingredients");
+let ulSelector = document.getElementById("ingredients");
 ingredients.forEach((element) => {
   var createLi = document.createElement("li");
   createLi.className = "item";
   createLi.textContent = element;
-  ingrSelect.append(createLi);
+  let ingrArray = [];
+  ingrArray.push(createLi);
+  ulSelector.append(...ingrArray);
 });
