@@ -1,6 +1,6 @@
 const inputSelect = document.getElementById("name-input");
 const outputSelect = document.getElementById("name-output");
-const protoB = () => {
+const feedbackFunction = () => {
   outputSelect.textContent = inputSelect.value;
 };
-inputSelect.addEventListener("change", protoB);
+inputSelect.addEventListener("input", feedbackFunction);
