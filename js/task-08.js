@@ -1,4 +1,8 @@
 const formSelect = document.querySelector("form");
+const User = {
+  email: "",
+  password: "",
+};
 function validationFunction(event) {
   event.preventDefault();
   const {
@@ -7,9 +11,10 @@ function validationFunction(event) {
   if (email.value === "" || password.value === "") {
     return alert("Wypełnij wszystkie wskazane pola !");
   } else {
-    let feedback = `email: ${email.value}
-password: ${password.value}`;
-    console.log(feedback);
+    const newUser = Object.create(User);
+    newUser.email = email.value;
+    newUser.password = password.value;
+    console.log(newUser);
   }
   formSelect.reset();
 }
