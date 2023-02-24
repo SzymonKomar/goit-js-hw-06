@@ -1,6 +1,10 @@
 const inputSelect = document.getElementById("name-input");
 const outputSelect = document.getElementById("name-output");
-const feedbackFunction = () => {
-  outputSelect.textContent = inputSelect.value;
-};
+function feedbackFunction() {
+  if (inputSelect.value.length === 0) {
+    outputSelect.textContent = "Anonymous";
+  } else {
+    outputSelect.textContent = inputSelect.value;
+  }
+}
 inputSelect.addEventListener("input", feedbackFunction);

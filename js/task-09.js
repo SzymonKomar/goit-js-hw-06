@@ -7,8 +7,9 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 function bgcChange() {
-  spanSelect.textContent = getRandomHexColor();
+  const randomColor = getRandomHexColor();
+  spanSelect.textContent = randomColor;
   let bodySelect = document.querySelector("body");
-  bodySelect.style.backgroundColor = getRandomHexColor();
+  bodySelect.style.backgroundColor = randomColor;
 }
 buttonSelect.addEventListener("click", bgcChange);
