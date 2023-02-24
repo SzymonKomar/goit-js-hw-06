@@ -6,5 +6,6 @@ function feedbackFunction() {
   } else {
     outputSelect.textContent = inputSelect.value;
   }
+  console.log(inputSelect.value);
 }
 inputSelect.addEventListener("input", feedbackFunction);
